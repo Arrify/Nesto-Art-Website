@@ -87,19 +87,19 @@ blockquote {
     border-radius: var(--border-radius);
 }
 
-.nav-links {
+.nav-link {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 1.25rem;
 }
 
-.nav-links a {
+.nav-link a {
     color: var(--white-color);
     transition: color var(--transition-speed);
 }
 
-.nav-links a:hover {
+.nav-link a:hover {
     color: var(--background-color);
 }
 
@@ -372,5 +372,24 @@ ul {
 li {
     margin-bottom: 10px;
     color: #333; /* You can adjust this color as per your preference */
+}
+
+.text-rust-orange {
+    color: #D47A6F !important; /* Rust orange color */
+}
+
+.navbar-toggler {
+    border-color: #D47A6F !important; /* Rust orange color for border */
+}
+
+/* To style the navbar toggler icon to rust-orange, you might need additional CSS or SVG manipulations, depending on the framework you're using. For Bootstrap, it's typically an SVG background. */
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3e%3cpath stroke="%23D47A6F" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22m-22 8h22"/%3e%3c/svg%3e');
+}
+
+.nav-item.active .nav-link {
+    color: #00008B !important; /* This is the color code for dark blue. Adjust if necessary. */
+    font-weight: bold;
 }
 

@@ -141,7 +141,7 @@ blockquote {
 /* Hero Section */
 .hero {
     height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero-bg-nestoart.png') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero-bg-nestoart.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags, title, and other head content -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- other CSS and JS includes -->
+</head>
+
+<body>
+
+<div id="header-placeholder"></div>
+
+<section class="py-5 bg-light">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="rust-orange">Contact NestoArt</h2>
+                <p class="dark-blue">Connect with our team for any queries, feedback, or collaborations. We are eager to
+                    transform your spaces!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Contact Form and Icon -->
+            <div class="col-md-6">
+                <div class="form-container">
+
+                    <div class="form-section">
+
+                        <h3 class="rust-orange">Message Us</h3>
+                        <form action="/path/to/your/server/script" method="post">
+                            <!-- Full Name -->
+                            <div class="form-group">
+                                <label for="name">Full Name:</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="John Doe"
+                                       required>
+                            </div>
+
+                            <!-- Email Address -->
+                            <div class="form-group">
+                                <label for="email">Email Address:</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                       placeholder="johndoe@example.com" required>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="form-group">
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone" name="phone" class="form-input"
+                                       placeholder="+1-234-567-8900">
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="form-group">
+                                <label for="subject">Subject:</label>
+                                <input type="text" id="subject" name="subject" class="form-input"
+                                       placeholder="Inquiry about NestoArt services">
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label for="message">Your Message:</label>
+                                <textarea id="message" name="message" rows="5" class="form-input"
+                                          placeholder="Write your message here..." required></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="form-group">
+                                <input type="submit" value="Send Message" class="btn rust-orange">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Contact Details & Map -->
+            <div class="col-md-6">
+                <div class="card">
+
+                    <div class="card-content">
+                        <div class="icon">
+                            <!-- Placeholder for an icon. You can replace this with an actual icon or an image -->
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <h3>Find Us</h3>
+                        <ul>
+                            <li><strong>Phone:</strong> +1-234-567-8900</li>
+                            <li><strong>Email:</strong> connect@nestoart.com</li>
+                            <li><strong>Address:</strong> 123 Nesto Street, ArtCity, Country</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?Jaipur" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- End of About Page Content -->
+
+<div id="footer-placeholder"></div>
+
+<script>
+    $(function () {
+        $("#header-placeholder").load("header.html");
+        $("#footer-placeholder").load("footer.html");
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* Root Variables */
+:root {
+    /* Colors */
+    --primary-color: #FF5733;      /* Rust Orange */
+    --secondary-color: #000080;    /* Dark Blue */
+    --background-color: #F5F5F5;  /* Light Grey */
+    --text-color: #333333;        /* Dark Grey */
+    --white-color: #FFFFFF;       /* White */
+
+    /* Typography */
+    --font-family: 'Lato', sans-serif;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --base-font-size: 16px;
+
+    /* Layout */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --spacing-xlarge: 3rem;
+    --border-radius: 5px;
+
+    /* Visual Enhancements */
+    --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-family);
+    font-size: var(--base-font-size);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+}
+
+a {
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+blockquote, .highlight-text {
+    font-family: var(--font-family);
+    font-style: italic;
+}
+
+.highlight-text {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+}
+
+blockquote {
+    border-left: 5px solid var(--primary-color);
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-medium);
+    background-color: var(--text-color);
+}
+
+.logo {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    text-decoration: none;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius);
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.25rem;
+}
+
+.nav-links a {
+    color: var(--white-color);
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover {
+    color: var(--background-color);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white-color);
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: var(--spacing-medium);
+        align-items: center;
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        background-color: var(--text-color);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero-bg-nestoart.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+}
+
+.hero-content {
+    padding: var(--spacing-large) var(--spacing-xlarge);
+}
+
+.hero .rust-orange, .rust-orange {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 1.2px;
+}
+
+.hero .dark-blue, .dark-blue {
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: 1px;
+}
+
+.btn-outline-light {
+    transition: all var(--transition-speed);
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--white-color);
+}
+
+h1.display-4:hover {
+    transform: scale(1.05);
+    transition: all var(--transition-speed);
+}
+
+
+.service-card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transform: scale(1.05);  /* Slightly enlarges the card on hover */
+    cursor: pointer;
+}
+.service-icon {
+    font-size: 3rem;
+    color: #D46A6A;
+    margin-bottom: 15px;
+}
+
+.service-card {
+    background-color: #FF5733;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;  /* Text color for the card */
+}
+
+/*.service-card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: all 0.3s;
+    height: 300px; !* fixed height *!
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}*/
+
+.service-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Horizontal centering */
+    justify-content: center;  /* Vertical centering */
+    height: 100%;
+    text-align: center;
+}
+.service-card-content p {
+    text-align: center;
+}
+
+.service-icon {
+    font-size: 50px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    display: block; /* To center the icons */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Timeline styles */
+.timeline-container {
+    position: relative;
+}
+
+.big-step {
+    font-size: 3rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.timeline-step {
+    border-left: 3px solid #a8a8a8; /* You can adjust the color */
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+.step-content {
+    padding-left: 1rem;
+}
+
+
+.faq-section {
+    background-color: #f9f9f9; /* Slight grey background for contrast */
+    border-radius: 5px; /* Rounded edges */
+}
+
+.faq-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.faq-header:hover {
+    background-color: #e7e7e7;
+}
+
+.faq-question {
+    cursor: pointer;
+    color: #333;
+    margin: 0;
+}
+
+.toggle-icon {
+    cursor: pointer;
+    font-weight: bold;
+    color: #007BFF; /* Adjust as per your theme color */
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 15px 15px;
+    color: #555;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #D47A6F;
+}
+
+.form-container {
+    display: flex;
+    border: 2px solid #D47A6F;
+    border-radius: 4px;
+    padding: 20px;
+    align-items: center;
+}
+
+.icon {
+    font-size: 100px;
+    color: #D47A6F;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.form-section {
+    flex: 3;
+}
+
+.contact-map {
+    margin-top: 20px;
+}
+
+.card {
+    border: 2px solid #D47A6F;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #333; /* You can adjust this color as per your preference */
+}
+
